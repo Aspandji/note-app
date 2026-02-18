@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-100;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-400 rounded;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-500;
+    }
+}
+
+@layer utilities {
+    /* Masonry columns support */
+    .columns-1 {
+        column-count: 1;
+    }
+    
+    .columns-2 {
+        column-count: 2;
+    }
+    
+    .columns-3 {
+        column-count: 3;
+    }
+    
+    .break-inside-avoid {
+        break-inside: avoid;
+    }
+}
