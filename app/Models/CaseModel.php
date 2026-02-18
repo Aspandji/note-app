@@ -39,13 +39,13 @@ class CaseModel extends Model
     }
 
     //scope untuk search
-    public function scopeSeacrh($query, $search)
+    public function scopeSearch($query, $search)
     {
         return $query->when($search, function ($query, $search) {
-            return $query->where('title', 'like', "%{search}%")
-                ->orWhere('description', 'like', "%{search}%")
-                ->orWhere('solution', 'like', "%{search}%")
-                ->orWhere('tags', 'like', "%{search}%");
+            return $query->where('title', 'like', "%{$search}%")
+                ->orWhere('description', 'like', "%{$search}%")
+                ->orWhere('solution', 'like', "%{$search}%")
+                ->orWhere('tags', 'like', "%{$search}%");
         });
     }
 
