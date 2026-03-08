@@ -60,4 +60,7 @@
             </div>
         </div>
     </div>
+
+    <!-- Modals -->
+    <livewire:case-form />
 </div>

@@ -40,7 +40,9 @@ class CasesList extends Component
 
     // Forms
     #[On('case-saved')]
+    #[On('case-deleted')]
     #[On('category-saved')]
+    #[On('category-deleted')]
     public function refreshList()
     {
         // Refresh Component
