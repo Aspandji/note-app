@@ -34,8 +34,10 @@
     }
 }
 
-@layer utilities {
-    /* Masonry columns support */
+
+ /* Masonry columns support */
+/* @layer utilities {
+   
     .columns-1 {
         column-count: 1;
     }
@@ -51,4 +53,4 @@
     .break-inside-avoid {
         break-inside: avoid;
     }
-}
+} */
